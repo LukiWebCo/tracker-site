@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About | AI Business Tracker</title>
+<meta name="description" content="Which AI-run businesses actually work? Reported revenue, setup details and verification level for each, updated daily.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="../"><span class="brand-by">LukiWebCo</span> AI Business Tracker</a>
+    <nav aria-label="Main">
+      <a href="../">Leaderboard</a>
+      <a href="../about/" aria-current="page">About</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<h1>About this tracker</h1>
+
+<section>
+  <h2>What is tracked</h2>
+  <p>AI-run businesses: projects where AI agents do most of the work of building and selling a product. For each one we record revenue, profit, customers, output, traction and how the agents are set up (models, harness, schedule, memory, how much a human does). Trading tools are not covered yet.</p>
+  <p>Each project is checked once a day (UTC). A project page shows its history, its setup, a timeline of events with links to evidence, and the daily notes from each check.</p>
+  <p>Numbers come from the project's own public pages, feeds and APIs. Every number links back to the source it came from, on the project page under "Latest reported values."</p>
+</section>
+
+<section id="verification">
+  <h2>What the badges mean</h2>
+  <p>Every number is shown with a badge that says how it was checked. The badge is written out in words so it never depends on color.</p>
+  <dl class="badges">
+    <div><dt><span class="badge badge-self_reported"><span class="badge-mark" aria-hidden="true"></span>Self-reported</span></dt><dd>The project says so, and nobody independent has confirmed it. This is the weakest level.</dd></div>
+    <div><dt><span class="badge badge-stripe_verified_3p"><span class="badge-mark" aria-hidden="true"></span>Stripe-verified</span></dt><dd>The figure has been confirmed against Stripe's records by a third party, not only on the project's say-so.</dd></div>
+    <div><dt><span class="badge badge-onchain"><span class="badge-mark" aria-hidden="true"></span>On-chain</span></dt><dd>The figure can be read from a public blockchain.</dd></div>
+    <div><dt><span class="badge badge-audited"><span class="badge-mark" aria-hidden="true"></span>Audited</span></dt><dd>An independent third party has audited the figure.</dd></div>
+  </dl>
+  <p>A project can move up a level over time. Its project page keeps that history under "Verification history."</p>
+</section>
+
+<section id="owner">
+  <h2>Projects run by the tracker's owner</h2>
+  <p>The owner of this tracker also runs an AI business of their own. It is tracked like every other project, but it is labeled "Run by the tracker's owner" on its row and its page, so you know about the conflict of interest.</p>
+  <ul>
+    <li>Its revenue ranks only when a third party has verified it. A self-reported figure still shows, with its badge, but it is listed as "Not ranked" and sorts with the projects that have no figure.</li>
+    <li>The tracker links to it only from its own project page: no banners, ads or featured spots.</li>
+  </ul>
+  <p>Right now, no tracked project is run by the owner.</p>
+</section>
+
+<section>
+  <h2>How the numbers are shown</h2>
+  <ul>
+    <li><strong>Not reported</strong> means the source did not give the number. It is never shown as 0, and we never estimate, fill in or back-date a figure.</li>
+    <li>Rankings use all-time revenue: net if the project reports it, otherwise gross. The leaderboard labels which one. Completed projects stay listed at the bottom and are not ranked.</li>
+    <li><strong>Revenue since tracking began</strong> is the latest figure minus the first one we recorded, so projects that started at different times can be compared more fairly.</li>
+    <li><strong>Stale</strong> marks a value whose source has not updated in more than 7 days.</li>
+    <li>On charts, a line breaks where more than 3 days have no reported value.</li>
+    <li>Profit is shown only when the project reports it. It is never worked out as revenue minus spend, and it can be negative (shown with a minus sign).</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Disclaimer</h2>
+  <p>Figures are as reported by each project and are not verified by us unless the badge says so. This site is for information only. It is not financial advice.</p>
+</section>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p>Figures are as reported by each project and are not verified by us unless the badge says so. Not financial advice. <a href="../about/">How this works</a></p>
+    <p>Data as of 2026-10-02 (UTC). A <span class="brand-by">LukiWebCo</span> project.</p>
+  </div>
+</footer>
+</body>
+</html>
