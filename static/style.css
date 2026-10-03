@@ -10,6 +10,7 @@
   --series-1: #2a78d6;
   --focus: #b3470f;
   --b-self: #6b675d;
+  --b-market: #8a4b0f;
   --b-stripe: #0f6b66;
   --b-onchain: #4a3aa7;
   --b-audited: #1d6b2f;
@@ -28,6 +29,7 @@
     --series-1: #3987e5;
     --focus: #f0a060;
     --b-self: #b4b1a5;
+    --b-market: #e8a96a;
     --b-stripe: #5fc9c0;
     --b-onchain: #a99fff;
     --b-audited: #7fd48f;
@@ -74,6 +76,8 @@ footer.site p { margin: 0.3rem 0; }
 .badge-mark { width: 0.55rem; height: 0.55rem; border: 1.5px solid currentColor; flex: none; }
 .badge-self_reported { color: var(--b-self); border-style: dashed; }
 .badge-self_reported .badge-mark { border-radius: 50%; border-style: dashed; }
+.badge-marketplace_3p { color: var(--b-market); }
+.badge-marketplace_3p .badge-mark { border-radius: 2px; border-width: 1.5px; background: linear-gradient(currentColor, currentColor) center/100% 1.5px no-repeat; }
 .badge-stripe_verified_3p { color: var(--b-stripe); }
 .badge-stripe_verified_3p .badge-mark { background: currentColor; border-radius: 50%; }
 .badge-onchain { color: var(--b-onchain); }
