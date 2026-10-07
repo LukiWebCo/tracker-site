@@ -14,79 +14,119 @@
   <div class="wrap bar wide">
     <a class="brand" href="../"><span class="brand-by">LukiWebCo</span> AI Business Tracker</a>
     <nav aria-label="Main">
-      <a href="../">Leaderboard</a>
+      <a href="../">Dataset</a>
       <a href="../watching/" aria-current="page">Watching</a>
+      <a href="../nanocorp/">NanoCorp</a>
       <a href="../about/">About</a>
     </nav>
   </div>
 </header>
 <main id="main" class="wrap wide">
-<h1>Watching: AI-native businesses</h1>
-<p class="lede">Data as of <time datetime="2026-10-06">2026-10-06</time> (UTC) &middot; 1 project.
-These are AI products run by people, or projects where we haven't yet seen agents run at least two business functions. They are tracked but not ranked. <a href="../about/#classes">How projects are classed</a>.</p>
-<div class="tools">
+<h1>Class 2: AI-native businesses</h1>
+<p class="lede">Data as of <time datetime="2026-10-07">2026-10-07</time> (UTC) &middot; 2 projects &middot; Active: 1 &middot; Quiet: 0 &middot; Unknown: 0 &middot; Dormant: 0 &middot; Unreachable: 0 &middot; Ended: 1. This is the shared dataset with Class 2 selected. <a href="../about/#classes">How classes work</a>.</p>
+<div class="tools" aria-label="Dataset controls">
   <label class="search">Search by name <input id="q" type="search" autocomplete="off" placeholder="Name"></label>
-  <label class="sortsel">Sort by
+  <label>Activity
+    <select id="filter-status"><option value="">All statuses</option>
+      <option value="active">Active</option>      <option value="quiet">Quiet</option>      <option value="unknown">Unknown</option>      <option value="dormant">Dormant</option>      <option value="unreachable">Unreachable</option>      <option value="ended">Ended</option>    </select>
+  </label>
+  <label>Class
+    <select id="filter-class">
+<option value="2" selected>Class 2</option>    </select>
+  </label>
+  <label>Type
+    <select id="filter-type"><option value="">All types</option>
+      <option value="benchmark">Benchmark</option>      <option value="digital_products">Digital products</option>      <option value="physical_retail">Physical retail</option>      <option value="saas">SaaS</option>      <option value="services">Services</option>    </select>
+  </label>
+  <label class="check-filter"><input id="filter-revenue" type="checkbox"> Reports revenue</label>
+  <label>Sort by
     <select id="sortsel">
-      <option value="0">Default (reported revenue)</option>
-      <option value="1">Name</option>
-      <option value="3">All-time revenue</option>
-      <option value="4">Last 30 days revenue</option>
-      <option value="5">All-time profit</option>
-      <option value="6">Paying customers</option>
-      <option value="11">Source last updated</option>
+      <option value="default">Default order</option>
+      <option value="name">Name</option>
+      <option value="activity">Activity</option>
+      <option value="last_activity">Last activity</option>
+      <option value="active_span">Active span</option>
+      <option value="updates">Updates (30 d)</option>
+      <option value="traffic_rank">Traffic rank</option>
+      <option value="class">Class</option>
+      <option value="type">Type</option>
+      <option value="human_role">Human role</option>
+      <option value="revenue">All-time revenue</option>
+      <option value="verification">Verification</option>
+      <option value="days_tracked">Days tracked</option>
     </select>
   </label>
   <p id="count" class="count" aria-live="polite"></p>
 </div>
 
-<div class="tablewrap" role="region" aria-label="Watching list" tabindex="0">
-<table id="board" class="board">
-  <caption class="sr">Watching list of tracked AI businesses. Column headers are buttons that sort the table.</caption>
+<div class="tablewrap" role="region" aria-label="Project dataset" tabindex="0">
+<table id="board" class="board" data-watching="true">
+  <caption class="sr">Dataset of tracked AI businesses. Activate a column heading to sort.</caption>
   <thead>
     <tr>
-      <th scope="col" data-type="num" class="num"><button type="button">Rank</button></th>
-      <th scope="col" data-type="text"><button type="button">Name</button></th>
-      <th scope="col" data-type="text"><button type="button">Status</button></th>
-      <th scope="col" data-type="num" class="num"><button type="button">All-time revenue</button></th>
-      <th scope="col" data-type="num" class="num"><button type="button">Last 30 days</button></th>
-      <th scope="col" data-type="num" class="num"><button type="button">All-time profit</button></th>
-      <th scope="col" data-type="num" class="num"><button type="button">Paying customers</button></th>
-      <th scope="col" data-type="num" class="num"><button type="button">Products live</button></th>
-      <th scope="col" data-type="text"><button type="button">Human role</button></th>
-      <th scope="col" data-type="num"><button type="button">Verification</button></th>
-      <th scope="col" data-type="num" class="num"><button type="button">Days tracked</button></th>
-      <th scope="col" data-type="text"><button type="button">Source last updated</button></th>
+      <th scope="col" data-key="name" data-kind="text" data-default-dir="asc"><button type="button">Name</button></th>
+      <th scope="col" data-key="activity" data-kind="text" data-default-dir="asc"><button type="button">Activity</button></th>
+      <th scope="col" data-key="last_activity" data-kind="date" data-default-dir="desc"><button type="button">Last activity</button></th>
+      <th scope="col" data-key="active_span" data-kind="number" data-default-dir="desc" class="num"><button type="button">Active span</button></th>
+      <th scope="col" data-key="updates" data-kind="number" data-default-dir="desc" class="num"><button type="button">Updates (30 d)</button></th>
+      <th scope="col" data-key="traffic_rank" data-kind="number" data-default-dir="asc" class="num"><button type="button">Traffic rank</button></th>
+      <th scope="col" data-key="class" data-kind="number" data-default-dir="asc"><button type="button">Class</button></th>
+      <th scope="col" data-key="type" data-kind="text" data-default-dir="asc"><button type="button">Type</button></th>
+      <th scope="col" data-key="human_role" data-kind="text" data-default-dir="asc"><button type="button">Human role</button></th>
+      <th scope="col" data-key="revenue" data-kind="number" data-default-dir="desc" class="num"><button type="button">All-time revenue</button></th>
+      <th scope="col" data-key="verification" data-kind="text" data-default-dir="asc"><button type="button">Verification</button></th>
+      <th scope="col" data-key="days_tracked" data-kind="number" data-default-dir="desc" class="num"><button type="button">Days tracked</button></th>
     </tr>
   </thead>
   <tbody>
-    <tr data-name="ai village (merch store season)" class="is-completed">
-      <td class="c-rank num" data-label="Rank" data-v="0">–<span class="sr"> not ranked</span></td>
-      <td class="c-name" data-label="Name" data-v="ai village (merch store season)">
+    <tr data-name="pnn, pixel news network" data-status="active" data-class="2" data-type="services" data-revenue="false" data-order="7">
+      <td class="c-name" data-label="Name" data-key="name" data-sort-value="pnn, pixel news network" data-source="https://pnn.watch" data-as-of="">
+        <a href="../p/pnn/">PNN, Pixel News Network</a>
+        <button type="button" class="expand" aria-expanded="false" aria-label="Show details for PNN, Pixel News Network"><span aria-hidden="true"></span></button>
+      </td>
+      <td class="c-activity" data-label="Activity" data-key="activity" data-sort-value="active" data-source="https://pnn.watch" data-as-of="2026-10-07"><span class="activity-label">Active</span></td>
+      <td class="c-last" data-label="Last activity" data-key="last_activity" data-sort-value="2026-10-07" data-source="https://pnn.watch" data-as-of="2026-10-07">
+<a href="https://pnn.watch" rel="nofollow noopener"><time datetime="2026-10-07">2026-10-07</time> · Last-Modified</a>      </td>
+      <td class="num" data-label="Active span" data-key="active_span" data-sort-value="11" data-source="" data-as-of="2026-10-07">11 days</td>
+      <td class="num" data-label="Updates (30 d)" data-key="updates" data-sort-value="1.0" data-source="https://pnn.watch" data-as-of="2026-10-07">1 of 1</td>
+      <td data-label="Traffic rank" data-key="traffic_rank" data-sort-value="" data-source="https://tranco-list.eu/top-1m.csv.zip" data-as-of="2026-10-06">Outside top 1M</td>
+      <td data-label="Class" data-key="class" data-sort-value="2" data-source="https://pnn.watch" data-as-of="">2 · AI-native business</td>
+      <td data-label="Type" data-key="type" data-sort-value="services" data-source="https://pnn.watch" data-as-of="">Services</td>
+      <td data-label="Human role" data-key="human_role" data-sort-value="" data-source="https://pnn.watch" data-as-of="">Not stated</td>
+      <td class="num c-revenue" data-label="All-time revenue" data-key="revenue" data-sort-value="" data-source="" data-as-of="">
+<span class="nr">Not reported</span>      </td>
+      <td data-label="Verification" data-key="verification" data-sort-value="" data-source="" data-as-of=""><span class="nr">Not reported</span></td>
+      <td class="num" data-label="Days tracked" data-key="days_tracked" data-sort-value="1" data-source="" data-as-of="2026-10-07">1</td>
+    </tr>
+    <tr data-name="ai village (merch store season)" data-status="ended" data-class="2" data-type="benchmark" data-revenue="false" data-order="10">
+      <td class="c-name" data-label="Name" data-key="name" data-sort-value="ai village (merch store season)" data-source="https://theaidigest.org/village/goal/create-your-own-merch-store-whichever-agents" data-as-of="">
         <a href="../p/ai-village/">AI Village (merch store season)</a>
         <button type="button" class="expand" aria-expanded="false" aria-label="Show details for AI Village (merch store season)"><span aria-hidden="true"></span></button>
       </td>
-      <td class="c-status" data-label="Status" data-v="completed">Completed</td>
-      <td class="c-rev num" data-label="All-time revenue" data-v="">
-        <span class="nr">Not reported</span>      </td>
-      <td class="num" data-label="Last 30 days" data-v=""><span class="nr">Not reported</span></td>
-      <td class="num" data-label="All-time profit" data-v=""><span class="nr">Not reported</span></td>
-      <td class="num" data-label="Paying customers" data-v=""><span class="nr">Not reported</span></td>
-      <td class="num" data-label="Products live" data-v=""><span class="nr">Not reported</span></td>
-      <td data-label="Human role" data-v="copilot_clicks">Co-pilot (human clicks)</td>
-      <td class="c-ver" data-label="Verification" data-v=""><span class="nr">Not reported</span></td>
-      <td class="num" data-label="Days tracked" data-v="5">5</td>
-      <td data-label="Source last updated" data-v=""><span class="nr">Not reported</span></td>
+      <td class="c-activity" data-label="Activity" data-key="activity" data-sort-value="ended" data-source="https://theaidigest.org/village/goal/create-your-own-merch-store-whichever-agents" data-as-of="2025-06-30"><span class="activity-label">Ended</span></td>
+      <td class="c-last" data-label="Last activity" data-key="last_activity" data-sort-value="2025-06-30" data-source="https://theaidigest.org/village/goal/create-your-own-merch-store-whichever-agents" data-as-of="2025-06-30">
+<a href="https://theaidigest.org/village/goal/create-your-own-merch-store-whichever-agents" rel="nofollow noopener"><time datetime="2025-06-30">2025-06-30</time> · Event</a>      </td>
+      <td class="num" data-label="Active span" data-key="active_span" data-sort-value="19" data-source="https://theaidigest.org/village/goal/create-your-own-merch-store-whichever-agents" data-as-of="2026-10-07">19 days</td>
+      <td class="num" data-label="Updates (30 d)" data-key="updates" data-sort-value="0.0" data-source="https://theaidigest.org/village/goal/create-your-own-merch-store-whichever-agents" data-as-of="2026-10-07">0 of 1</td>
+      <td data-label="Traffic rank" data-key="traffic_rank" data-sort-value="" data-source="" data-as-of="">Not applicable</td>
+      <td data-label="Class" data-key="class" data-sort-value="2" data-source="https://theaidigest.org/village/goal/create-your-own-merch-store-whichever-agents" data-as-of="">2 · AI-native business</td>
+      <td data-label="Type" data-key="type" data-sort-value="benchmark" data-source="https://theaidigest.org/village/goal/create-your-own-merch-store-whichever-agents" data-as-of="">Benchmark</td>
+      <td data-label="Human role" data-key="human_role" data-sort-value="copilot_clicks" data-source="https://theaidigest.org/village/goal/create-your-own-merch-store-whichever-agents" data-as-of="">Co-pilot (human clicks)</td>
+      <td class="num c-revenue" data-label="All-time revenue" data-key="revenue" data-sort-value="" data-source="" data-as-of="">
+<span class="nr">Not reported</span>      </td>
+      <td data-label="Verification" data-key="verification" data-sort-value="" data-source="" data-as-of=""><span class="nr">Not reported</span></td>
+      <td class="num" data-label="Days tracked" data-key="days_tracked" data-sort-value="6" data-source="https://theaidigest.org/village/goal/create-your-own-merch-store-whichever-agents" data-as-of="2026-10-07">6</td>
     </tr>
   </tbody>
 </table>
 </div>
-<p id="empty" class="empty" hidden>No project matches that name.</p>
-<p class="foot-note">Watching projects are not ranked. Completed projects stay listed at the bottom, unranked. Dashes mean "Not reported," never zero.</p></main>
+<p id="empty" class="empty" hidden>No project matches these filters.</p>
+<p class="foot-note">Revenue is shown as reported and is not used to order projects. "Not reported" means the source gave no value; it is never shown as zero.</p>
+<p class="downloads">Download latest values: <a href="../data.json">JSON</a> · <a href="../data.csv">CSV</a>.</p></main>
 <footer class="site">
   <div class="wrap wide">
     <p>Figures are as reported by each project and are not verified by us unless the badge says so. Not financial advice. <a href="../about/">How this works</a></p>
-    <p>Data as of 2026-10-06 (UTC). A <span class="brand-by">LukiWebCo</span> project.</p>
+    <p>Data as of 2026-10-07 (UTC). A <span class="brand-by">LukiWebCo</span> project.</p>
   </div>
 </footer>
 <script src="../static/app.js" defer></script></body>

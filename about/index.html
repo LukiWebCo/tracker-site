@@ -14,8 +14,9 @@
   <div class="wrap bar">
     <a class="brand" href="../"><span class="brand-by">LukiWebCo</span> AI Business Tracker</a>
     <nav aria-label="Main">
-      <a href="../">Leaderboard</a>
+      <a href="../">Dataset</a>
       <a href="../watching/">Watching</a>
+      <a href="../nanocorp/">NanoCorp</a>
       <a href="../about/" aria-current="page">About</a>
     </nav>
   </div>
@@ -31,8 +32,21 @@
 </section>
 
 <section id="classes">
-  <h2>Who is on the leaderboard</h2>
-  <p>Projects are sorted by how much of the business AI agents actually run. <strong>Autonomous</strong> (class 4) and <strong>AI-operated</strong> (class 3) projects are ranked on the leaderboard: agents run at least two business functions (build, research, marketing, sales, support, monitoring, finance, ops), each backed by a public source, and the human is not clicking along. An autonomous project goes further: the human only sets strategy or does nothing, and agents monitor or run operations themselves. <strong>AI-native</strong> projects (class 2), where the product is AI but people run the company or we have not yet seen agents run two functions, go on the <a href="../watching/">Watching</a> list and are not ranked. Founders who simply use AI tools are not listed. The class is worked out by the site from the project's setup, never typed in; a project moves up when new evidence turns up.</p>
+  <h2>Project classes</h2>
+  <p>Class is a column and a filter in the same dataset; there is no separate leaderboard. <strong>Autonomous</strong> (class 4) and <strong>AI-operated</strong> (class 3) projects have at least two evidenced business functions run by agents and a human role other than co-pilot clicks; class 4 additionally means the human only sets strategy or does nothing and agents monitor or run operations. <strong>AI-native</strong> (class 2) means the product is AI but people run the company, or we have not yet seen agents run at least two functions. Class is derived from public evidence about agent functions and human role, not typed in. Founders who simply use AI tools are not listed. <a href="../watching/">Class 2 projects</a> can be viewed as a preset filter.</p>
+</section>
+
+<section id="activity">
+  <h2>How activity is judged</h2>
+  <p>Activity uses dated evidence: Last-Modified, sitemap and feed dates, GitHub pushes, the source's own update date, recorded events, and detected page changes. The newest dated signal is the last activity. A project is <strong>Active</strong> when that date is within 7 days, <strong>Quiet</strong> at 8–30 days, and <strong>Dormant</strong> after 30 days. A completed project is <strong>Ended</strong>; three newest readings on different days that are all non-2xx or errors mean <strong>Unreachable</strong>. With no dated evidence it is <strong>Unknown</strong>.</p>
+  <p>The default order groups statuses as Active, Quiet, Unknown, Dormant, Unreachable, Ended; within each group it puts Tranco-listed domains first by traffic rank, then longer active spans, then name. Active span runs from the stated start date, first archived date, or first tracked date to the end date, last activity for Ended or Dormant projects, or the current data date.</p>
+  <p>Updates (30 d) counts observed page readings whose visible text could be compared with an earlier reading within 3 days; it reports how many changed. It starts when we begin reading and is not backfilled. A page with a live clock or counter can change every day, so dated signals are listed with their kind for readers to judge.</p>
+  <p>Traffic rank comes from <a href="https://tranco-list.eu/" rel="nofollow noopener">Tranco</a>, a free daily research-grade list of the top 1 million sites. Most small projects are outside it. Traffic rank only separates the few larger sites; it is not a measure of business performance. Revenue is shown with its verification badge, but is not used to order projects.</p>
+</section>
+
+<section id="nanocorp">
+  <h2>NanoCorp directory</h2>
+  <p>The <a href="../nanocorp/">NanoCorp page</a> shows weekly snapshots of the platform's public live-business directory. Names, launch dates and revenue captions are reported by NanoCorp, not independently verified by us; these businesses are not registry projects and are separate from this dataset. We read the directory listing only, not each company page. An empty or refreshing directory is treated as a failed collection, so the last successful snapshot stays visible.</p>
 </section>
 
 <section id="verification">
@@ -50,11 +64,7 @@
 
 <section id="owner">
   <h2>Projects run by the tracker's owner</h2>
-  <p>The owner of this tracker also runs an AI business of their own. It is tracked like every other project, but it is labeled "Run by the tracker's owner" on its row and its page, so you know about the conflict of interest.</p>
-  <ul>
-    <li>Its revenue ranks only when a third party backs it: the revenue itself is verified, or the marketplace that sells its products shows a public sales count for the same day. Otherwise the figure still shows, with its badge, but it is listed as "Not ranked" and sorts with the projects that have no figure.</li>
-    <li>The tracker links to it only from its own project page: no banners, ads or featured spots.</li>
-  </ul>
+  <p>The owner of this tracker also runs an AI business of their own. It is tracked like every other project, but is labeled "Run by the tracker's owner" on its row and page so readers can weigh its numbers. The label does not change the dataset order. The tracker links to it only from its own project page: no banners, ads or featured spots.</p>
   <p>Right now, no tracked project is run by the owner.</p>
 </section>
 
@@ -62,7 +72,7 @@
   <h2>How the numbers are shown</h2>
   <ul>
     <li><strong>Not reported</strong> means the source did not give the number. It is never shown as 0, and we never estimate, fill in or back-date a figure.</li>
-    <li>Rankings use all-time revenue: net if the project reports it, otherwise gross. The leaderboard labels which one. Completed projects stay listed at the bottom and are not ranked.</li>
+    <li>All-time revenue is net when reported, otherwise gross, and is labeled. It is shown with its verification badge and can be sorted as a column, but it does not decide which projects are listed or their default order.</li>
     <li><strong>Revenue since tracking began</strong> is the latest figure minus the first one we recorded, so projects that started at different times can be compared more fairly.</li>
     <li><strong>Stale</strong> marks a value whose source has not updated in more than 7 days.</li>
     <li>On charts, a line breaks where more than 3 days have no reported value.</li>
@@ -78,7 +88,7 @@
 <footer class="site">
   <div class="wrap">
     <p>Figures are as reported by each project and are not verified by us unless the badge says so. Not financial advice. <a href="../about/">How this works</a></p>
-    <p>Data as of 2026-10-06 (UTC). A <span class="brand-by">LukiWebCo</span> project.</p>
+    <p>Data as of 2026-10-07 (UTC). A <span class="brand-by">LukiWebCo</span> project.</p>
   </div>
 </footer>
 </body>
