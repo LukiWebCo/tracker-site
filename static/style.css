@@ -206,3 +206,7 @@ figcaption { margin-top: 0.5rem; color: var(--ink); font-size: 0.95rem; }
 @media (max-width: 600px) {
   table.plain { display: block; overflow-x: auto; max-width: 100%; }
 }
+
+figure img { display: block; width: 100%; max-width: 720px; height: auto; }
+figure { margin: 1.5rem 0; }
+figcaption { font-size: 0.85rem; color: var(--ink-2); max-width: 720px; }
