@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About | AI Business Tracker</title>
-<meta name="description" content="Which AI-run businesses actually work? Reported revenue, setup details and verification level for each, updated daily.">
+<meta name="description" content="An archived LukiWebCo experiment: daily, sourced readings on AI-run businesses, 2–27 October 2026.">
 <link rel="icon" href="data:,">
 <link rel="stylesheet" href="../static/style.css">
 </head>
@@ -12,23 +12,24 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site">
   <div class="wrap bar">
-    <a class="brand" href="../"><span class="brand-by">LukiWebCo</span> AI Business Tracker</a>
+    <a class="brand" href="../"><span class="brand-by">LukiWebCo</span> AI Business Tracker (archived)</a>
     <nav aria-label="Main">
-      <a href="../">Dataset</a>
-      <a href="../watching/">Watching</a>
+      <a href="../">Home</a>
+      <a href="../research/">Research</a>
+      <a href="../dataset/">Dataset</a>
       <a href="../nanocorp/">NanoCorp</a>
       <a href="../about/" aria-current="page">About</a>
     </nav>
   </div>
 </header>
-<main id="main" class="wrap">
+<div class="archivebanner" role="note">Archived. This tracker stopped collecting on 27 October 2026; figures are frozen as of that date. <a href="../research/">Read the findings →</a></div><main id="main" class="wrap">
 <h1>About this tracker</h1>
 
 <section>
-  <h2>What is tracked</h2>
-  <p>AI-run businesses: projects where AI agents do most of the work of building and selling a product. For each one we record revenue, profit, customers, output, traction and how the agents are set up (models, harness, schedule, memory, how much a human does). Trading tools are not covered yet.</p>
-  <p>Each project is checked once a day (UTC). A project page shows its history, its setup, a timeline of events with links to evidence, and the daily notes from each check.</p>
-  <p>Numbers come from the project's own public pages, feeds and APIs. Every number links back to the source it came from, on the project page under "Latest reported values."</p>
+  <h2>What was tracked</h2>
+  <p>AI-run businesses: projects where AI agents do most of the work of building and selling a product. For each one we recorded revenue, profit, customers, output, traction and how the agents are set up (models, harness, schedule, memory, how much a human does). Trading tools were not covered.</p>
+  <p>Each project was checked once a day (UTC) from 2 to 27 October 2026, when the tracker was retired. A project page shows its history, its setup, a timeline of events with links to evidence, and the notes from each check.</p>
+  <p>Numbers came from the project's own public pages, feeds and APIs. Every number links back to the source it came from, on the project page under "Latest reported values."</p>
 </section>
 
 <section id="classes">
@@ -40,13 +41,13 @@
   <h2>How activity is judged</h2>
   <p>Activity uses dated evidence: Last-Modified, sitemap and feed dates, GitHub pushes, the source's own update date, recorded events, and detected page changes. The newest dated signal is the last activity. A project is <strong>Active</strong> when that date is within 7 days, <strong>Quiet</strong> at 8–30 days, and <strong>Dormant</strong> after 30 days. A completed project is <strong>Ended</strong>; three newest readings on different days that are all non-2xx or errors mean <strong>Unreachable</strong>. With no dated evidence it is <strong>Unknown</strong>.</p>
   <p>The default order groups statuses as Active, Quiet, Unknown, Dormant, Unreachable, Ended; within each group it puts Tranco-listed domains first by traffic rank, then longer active spans, then name. Active span runs from the stated start date, first archived date, or first tracked date to the end date, last activity for Ended or Dormant projects, or the current data date.</p>
-  <p>Updates (30 d) counts observed page readings whose visible text could be compared with an earlier reading within 3 days; it reports how many changed. It starts when we begin reading and is not backfilled. A page with a live clock or counter can change every day, so dated signals are listed with their kind for readers to judge.</p>
+  <p>Updates (30 d) counts observed page readings whose visible text could be compared with an earlier reading within 3 days; it reports how many changed. It started when we began reading and was not backfilled. A page with a live clock or counter can change every day, so dated signals are listed with their kind for readers to judge.</p>
   <p>Traffic rank comes from <a href="https://tranco-list.eu/" rel="nofollow noopener">Tranco</a>, a free daily research-grade list of the top 1 million sites. Most small projects are outside it. Traffic rank only separates the few larger sites; it is not a measure of business performance. Revenue is shown with its verification badge, but is not used to order projects.</p>
 </section>
 
 <section id="nanocorp">
   <h2>NanoCorp directory</h2>
-  <p>The <a href="../nanocorp/">NanoCorp page</a> shows weekly snapshots of the platform's public live-business directory. Names, launch dates and revenue captions are reported by NanoCorp, not independently verified by us; these businesses are not registry projects and are separate from this dataset. We read the directory listing only, not each company page. An empty or refreshing directory is treated as a failed collection, so the last successful snapshot stays visible.</p>
+  <p>The <a href="../nanocorp/">NanoCorp page</a> shows weekly snapshots of the platform's public live-business directory. Names, launch dates and revenue captions are reported by NanoCorp, not independently verified by us; these businesses are not registry projects and are separate from this dataset. We read only the directory listing, not each company page. An empty or refreshing directory was treated as a failed collection, so the last successful snapshot stayed visible.</p>
 </section>
 
 <section id="verification">
@@ -64,8 +65,8 @@
 
 <section id="owner">
   <h2>Projects run by the tracker's owner</h2>
-  <p>The owner of this tracker also runs an AI business of their own. It is tracked like every other project, but is labeled "Run by the tracker's owner" on its row and page so readers can weigh its numbers. The label does not change the dataset order. The tracker links to it only from its own project page: no banners, ads or featured spots.</p>
-  <p>Right now, no tracked project is run by the owner.</p>
+  <p>The owner of this tracker also runs an AI business of their own. It was tracked like every other project, but is labeled "Run by the tracker's owner" on its row and page so readers can weigh its numbers. The label does not change the dataset order. The tracker links to it only from its own project page: no banners, ads or featured spots.</p>
+  <p>At retirement, no tracked project was run by the owner.</p>
 </section>
 
 <section>
@@ -88,7 +89,7 @@
 <footer class="site">
   <div class="wrap">
     <p>Figures are as reported by each project and are not verified by us unless the badge says so. Not financial advice. <a href="../about/">How this works</a></p>
-    <p>Data as of 2026-10-27 (UTC). A <span class="brand-by">LukiWebCo</span> project.</p>
+    <p>Data frozen as of 2026-10-27 (UTC). A LukiWebCo project. <a href="https://lukiwebco.com/#contact">Work with LukiWebCo</a></p>
   </div>
 </footer>
 </body>
